@@ -46,10 +46,8 @@ button {
 }
 
 
-.container-img{
-    > img:not(.active){
-        display: none;
-    }
+img:not(.active){
+    display: none;
 }
 
 .active{
