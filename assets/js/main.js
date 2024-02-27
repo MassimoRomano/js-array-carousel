@@ -12,7 +12,14 @@ let imgActive = 0;
 
 const slidesElement = document.querySelector('.container-img');
 
-console.log(slides, imgActive, slidesElement);
+//aggiungo delle variabili per i pulsanti next e prev
+const nextElement = document.querySelector('#next')
+const prevElement = document.querySelector('#prev')
+
+
+/* console.log(slides, imgActive, slidesElement);
+ */
+
 
 //inserisco un ciclo for per scorrere nelle img
 for (let i = 0; i < slides.length; i++) {
