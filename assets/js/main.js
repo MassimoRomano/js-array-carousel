@@ -13,8 +13,8 @@ let imgActive = 0;
 const slidesElement = document.querySelector('.container-img');
 
 //aggiungo delle variabili per i pulsanti next e prev
-const nextElement = document.querySelector('#next')
-const prevElement = document.querySelector('#prev')
+const nextElement = document.querySelector('#next');
+const prevElement = document.querySelector('#prev');
 
 
 /* console.log(slides, imgActive, slidesElement);
@@ -32,3 +32,14 @@ for (let i = 0; i < slides.length; i++) {
 
     slidesElement.insertAdjacentHTML('beforeend', slideMarkup);
 }
+
+
+console.log(nextElement, prevElement);
+
+nextElement.addEventListener('click', function() {
+    console.log('vai avanti');
+})
+
+prevElement.addEventListener('click', function() {
+    console.log('vai indietro');
+})
