@@ -27,7 +27,7 @@ for (let i = 0; i < slides.length; i++) {
     console.log(slide);
 
 //inserisco un markup per selezionare le img e dargli la class active 
-    let slideMarkup = `<img class="${i === imgActive ? 'active' : ''}" src="./assets/img/${slide}" alt="">`;
+    let slideMarkup = `<img class="${i === imgActive ? 'active ' : ''}" src="./assets/img/${slide}" alt="">`;
     console.log(slideMarkup);
 
     slidesElement.insertAdjacentHTML('beforeend', slideMarkup);
@@ -43,6 +43,10 @@ nextElement.addEventListener('click', function() {
 
     // dico al programma di passare la class active alla prossima img    
     imgActive++
+
+    if (imgActive > slides.length - 1) {
+        imgActive = 0;
+    }
 
     const imgCurrent = document.querySelector('img.active');
 
@@ -60,5 +64,24 @@ nextElement.addEventListener('click', function() {
 prevElement.addEventListener('click', function() {
     console.log('vai indietro');
 
+    imgActive--
     
+    //loop for no stop the carousel
+    if (imgActive < 0) {
+        imgActive = slides.length - 1;
+    }
+
+    // change active image 
+    const imgCurrent = document.querySelector('img.active');
+    //console.log(currentImage);
+    imgCurrent.classList.remove('active');
+    
+    const allImg = document.querySelectorAll('.container-img img');
+
+    allImg[imgActive].classList.add('active');
+
+
 })
+    
+
+

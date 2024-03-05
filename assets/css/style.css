@@ -4,14 +4,18 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
+    
 }
 
 .container {
     width: 80%;
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide {
@@ -21,8 +25,13 @@ body{
 
 img {
     display: block;
-    width: 100%;
+    width: 1600px;
+    height: 800px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 10px;  
 }
+
 
 button {
     background-color: rgba(0, 0, 0, 0.5);
@@ -31,32 +40,29 @@ button {
     padding: 10px 20px;
 }
 
-.updown{
+.updown {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#next{
+#next {
     position: absolute;
     bottom: 0;
+
 }
 
-#prev{
+#prev {
     position: absolute;
     top: 0;
+
 }
 
 
-img:not(.active){
+img:not(.active) {
     display: none;
 }
 
-.active{
+.active {
     display: block;
 }
-
-
-
-
-
